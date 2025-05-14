@@ -29,17 +29,15 @@ The project is organized into backend, frontend, and tests components:
 ```plaintext
 Project_expense_tracking/
 ├── backend/
-│ ├── init.py #Marks the backend directory as a Python package.
 │ ├── server.py # FastAPI app entry point
 │ ├── db_helper.py # DB functions to add, fetch, filter expenses
 │ ├── logging_setup.py # Centralized logging config
 │
 ├── frontend/
-│ ├── init.py 
 │ ├── app.py # UI launch logic
 │ ├── add_update.py # UI for adding/updating expenses
-│ ├── budgets_ui.py # UI for setting and managing budgets
-│ ├── analytics_ui.py # UI for displaying expense trends
+│ ├── analytics_by_category.py # UI for showing analytics by category
+│ ├── analytics_by_months.py # UI for showing analytics by category
 │
 ├── tests/
 │ ├── backend/
@@ -129,22 +127,23 @@ pytest
   - Notes
 - Click **Save** to add new expenses or update existing ones.
 
-### 📈 View Analytics
+### 📈 View Analytics By Category
 
-- Go to the **"Analytics"** tab.
+- Go to the **"Analytics By Category"** tab.
 - Select a date range and click **"Get Analytics"**.
 - View:
   - A bar chart of spending by category
   - A table summarizing expenses
+  
+### 📈 View Analytics By Month
 
-### 📊 Manage Budgets
+- Go to the **"Analytics By Month"** tab.
+- Select a date range and click **"Get Analytics"**.
+- View:
+  - A bar chart of spending by month
+  - A table summarizing expenses
 
-- Navigate to the **"Budgets"** tab.
-- Select a month and set budgets for categories.
-- View budget status:
-  - **Total spent**
-  - **Percentage of budget used**
-  - **Indicators** for: within, approaching, or over budget
+
 
 
 ---
@@ -153,10 +152,8 @@ pytest
 
 ## 🧑‍💻 Author
 
-Made by Ayesha Shaik
+Made by Rehan Khan
 
 ---
 
-## 📜 License
 
-This project is open-source and available under the [MIT License](LICENSE).
